@@ -1,14 +1,14 @@
 const eventsData = [
     {
       id: 1,
-      title: '10:00 AM - Meeting with Client',
+      title: '10:35 AM - 11:40 AM - Meeting with Client',
       start: new Date(2024, 3, 15, 10, 35),
       end: new Date(2024, 3, 15, 11, 40),
       color: '#1976D2'
     },
     {
       id: 2,
-      title: '12:00 PM - Lunch Break',
+      title: '11:45 AM - 1:00 PM - Lunch Break',
       start: new Date(2024, 3, 15, 11, 45),
       end: new Date(2024, 3, 15, 13, 0),
       color: '#388E3C'
@@ -68,36 +68,9 @@ const CalendarWeekView = () => {
         );
       });
     };
-  
-    // return (
-    //   <div style={{ display: 'flex', overflowX: 'auto', height: '100vh' }}>
-    //     {/* Time Slot Column */}
-    //     <div style={{ flex: '0 0 50px', borderRight: '1px solid #ccc', padding: '5px', marginTop: '3rem' }}>
-    //       {[...Array(13)].map((_, i) => (
-    //         <div key={i} style={{ marginBottom: '5%', marginTop: '5%' }}>{8 + i}:00</div>
-    //       ))}
-    //     </div>
-    //     {/* Days Columns */}
-    //     {daysOfWeek.map((day, index) => (
-    //       <div key={index} style={{ flex: '1', borderRight: '1px solid #ccc' }}>
-    //         <div style={{ padding: '5px', borderBottom: '1px solid #ccc' }}>{day}</div>
-    //         <div style={{ position: 'relative', height: '100%' }}>
-    //           {renderEventsForDay(index + 1)} {/* Adding 1 to match JavaScript's day indices */}
-    //         </div>
-    //       </div>
-    //     ))}
-    //   </div>
-    // );
 
     return (
         <div style={{ display: 'flex', overflowX: 'auto', height: '100vh' }}>
-          {/* Time Slot Column */}
-          <div style={{ flex: '0 0 50px', borderRight: '1px solid #ccc', padding: '5px', marginTop: '0rem' }}>
-            {[...Array(13)].map((_, i) => (
-              <div key={i} style={{ marginBottom: 'calc(100%)', marginTop: 'calc(100%)' }}>{8 + i}:00</div>
-            ))}
-          </div>
-          {/* Days Columns */}
           {daysOfWeek.map((day, index) => (
             <div key={index} style={{ flex: '1', borderRight: '1px solid #ccc' }}>
               <div style={{ padding: '1px', borderBottom: '1px solid #ccc' }}>{day}</div>
